@@ -9,7 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let loginView = LoginView()
+    private let loginView = LoginView()
+    private let signInButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         
@@ -24,16 +25,35 @@ extension LoginViewController {
     private func style() {
         
         loginView.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.configuration = .filled()
+        signInButton.configuration?.imagePadding = 8
+        signInButton.setTitle("Sign In", for: .normal)
+        signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
     }
     
     private func layout() {
         
         view.addSubview(loginView)
+        view.addSubview(signInButton)
         NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1)
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
+            
+            signInButton.topAnchor.constraint(equalTo: loginView.bottomAnchor, constant: 16),
+            signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
         ])
+    }
+}
+
+// MARK: - Actions
+extension LoginViewController {
+    
+    @objc func signInTapped() {
+        
+        print("\(#function) called")
     }
 }
 
