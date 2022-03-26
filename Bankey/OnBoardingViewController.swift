@@ -13,10 +13,25 @@ class OnBoardingViewController: UIViewController {
     let imageView = UIImageView()
     let label = UILabel()
     
+    let imageName: String?
+    let titleText: String?
+    
+    init(imageName: String? = nil, titleText: String? = nil) {
+        self.imageName = imageName
+        self.titleText = titleText
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         load()
+        loadData()
     }
 }
 
@@ -28,14 +43,12 @@ extension OnBoardingViewController {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "delorean")
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title3)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
-        label.text = "Bankey is faster easier to use, and has a brand new look and feel that will make you feel you are back in 1989."
         
     }
     
@@ -52,5 +65,15 @@ extension OnBoardingViewController {
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
             
         ])
+    }
+    
+    private func loadData() {
+        if let imageName = imageName {
+            imageView.image = UIImage(named: imageName)
+        }
+        
+        if let titleText = titleText {
+            label.text = titleText
+        }
     }
 }
