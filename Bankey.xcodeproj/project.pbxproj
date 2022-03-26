@@ -12,6 +12,7 @@
 		49B2706327E2313E005D75E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B2706227E2313E005D75E3 /* Assets.xcassets */; };
 		49B2706627E2313E005D75E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B2706427E2313E005D75E3 /* LaunchScreen.storyboard */; };
 		49D0F7E327EE283A00173980 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F7E227EE283A00173980 /* OnBoardingContainerViewController.swift */; };
+		49D0F7E527EEC5F200173980 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F7E427EEC5F200173980 /* OnBoardingViewController.swift */; };
 		49FC713327E27E890013E0E7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC713227E27E890013E0E7 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		49B2706527E2313E005D75E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B2706727E2313E005D75E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49D0F7E227EE283A00173980 /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
+		49D0F7E427EEC5F200173980 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		49FC713227E27E890013E0E7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				49D0F7E227EE283A00173980 /* OnBoardingContainerViewController.swift */,
+				49D0F7E427EEC5F200173980 /* OnBoardingViewController.swift */,
 			);
 			name = OnBoarding;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				49B2705E27E2313D005D75E3 /* LoginViewController.swift in Sources */,
 				49B2705A27E2313D005D75E3 /* AppDelegate.swift in Sources */,
 				49D0F7E327EE283A00173980 /* OnBoardingContainerViewController.swift in Sources */,
+				49D0F7E527EEC5F200173980 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
