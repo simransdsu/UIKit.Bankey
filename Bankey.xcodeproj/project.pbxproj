@@ -13,6 +13,7 @@
 		49B2706627E2313E005D75E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B2706427E2313E005D75E3 /* LaunchScreen.storyboard */; };
 		49D0F7E327EE283A00173980 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F7E227EE283A00173980 /* OnBoardingContainerViewController.swift */; };
 		49D0F7E527EEC5F200173980 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F7E427EEC5F200173980 /* OnBoardingViewController.swift */; };
+		49F95CF927FC01F700F90809 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F95CF827FC01F700F90809 /* DummyViewController.swift */; };
 		49FC713327E27E890013E0E7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC713227E27E890013E0E7 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		49B2706727E2313E005D75E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49D0F7E227EE283A00173980 /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
 		49D0F7E427EEC5F200173980 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		49F95CF827FC01F700F90809 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		49FC713227E27E890013E0E7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 			children = (
 				49B2705D27E2313D005D75E3 /* LoginViewController.swift */,
 				49FC713227E27E890013E0E7 /* LoginView.swift */,
+				49F95CF827FC01F700F90809 /* DummyViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49FC713327E27E890013E0E7 /* LoginView.swift in Sources */,
+				49F95CF927FC01F700F90809 /* DummyViewController.swift in Sources */,
 				49B2705E27E2313D005D75E3 /* LoginViewController.swift in Sources */,
 				49B2705A27E2313D005D75E3 /* AppDelegate.swift in Sources */,
 				49D0F7E327EE283A00173980 /* OnBoardingContainerViewController.swift in Sources */,
