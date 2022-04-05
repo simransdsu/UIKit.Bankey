@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let onBoardingContainerView = OnboardingContainerViewController()
     let dummyViewController = DummyViewController()
     
+    var hasOnBoarded: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "hasOnBoarded")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "hasOnBoarded")
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -34,10 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
         
-        if !UserDefaults.standard.bool(forKey: "onboarding_done") {
-            setRootViewController(onBoardingContainerView)
-        } else {
+        if hasOnBoarded {
             setRootViewController(dummyViewController)
+        } else {
+            setRootViewController(onBoardingContainerView)
         }
         
     }
@@ -45,8 +54,8 @@ extension AppDelegate: LoginViewControllerDelegate {
 
 extension AppDelegate: OnBoardingContainerViewDelegate {
     func didFinishOnBoarding() {
-        UserDefaults.standard.set(true, forKey: "onboarding_done")
-        setRootViewController(DummyViewController())
+        hasOnBoarded = true
+        setRootViewController(dummyViewController)
     }
 }
 
